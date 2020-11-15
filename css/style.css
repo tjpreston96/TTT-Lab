@@ -1,14 +1,20 @@
 body {
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: cursive;
     background-color: #000A40;
+    color: #cfb53b;
+}
+
+h1{
+    font-size: 42px;
+    font-weight: bolder;
 }
 
 h2 {
     margin: 0 auto;
     font-size: 35px;
     margin: 10px;
-    
+
 }
 
 .flex-container {
