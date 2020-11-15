@@ -18,13 +18,11 @@ h2 {
 }
 
 .flex-container {
-    /* In order to use flex-box we need to first set our display property */
     display: flex;
     /* center the container horizontally */
     justify-content: center;
-    /* this will center content vertically */
+    /* center content vertically */
     align-items: center;
-    /* tells the container to align the children in columns rather than rows */
 }
 
 .flex-column {
