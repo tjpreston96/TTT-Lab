@@ -23,7 +23,7 @@ let win;
 
 const squares = Array.from(document.querySelectorAll('#board div'));
 
-
+console.log(squares)
 /*----- event listeners -----*/
 
 
@@ -44,7 +44,7 @@ function getWinner() {
 };
 
 
-function handleTurn() {
+function handleTurn(event) {
     let idx = squares.findIndex((square) => {
         return square === event.target;
     });
