@@ -44,7 +44,6 @@ function getWinner() {
 
 function handleTurn(evt) {
     let idx = squares.findIndex((square) => {
-        if (squares)
         return square === evt.target;
     });
     board[idx] = turn;
