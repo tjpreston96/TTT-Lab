@@ -10,7 +10,6 @@ const winningCombos = [
     [2, 4, 6]
     ];
 
-const messages = document.querySelector('h2');
 
 /*----- app's state (variables) -----*/
 let board;
@@ -19,11 +18,10 @@ let win;
 
 
 /*----- cached element references -----*/
-
+const messages = document.querySelector('h2');
 
 const squares = Array.from(document.querySelectorAll('#board div'));
 
-console.log(squares)
 /*----- event listeners -----*/
 
 
@@ -46,6 +44,7 @@ function getWinner() {
 
 function handleTurn(event) {
     let idx = squares.findIndex((square) => {
+        if (squares)
         return square === event.target;
     });
     board[idx] = turn;
