@@ -44,7 +44,7 @@ function getWinner() {
 
 function handleTurn(evt) {
     console.log(evt.target.textContent)
-    if(winner === null || !evt.target.textContent) {
+    if(winner === null && !evt.target.textContent) {
         let idx = squares.findIndex((square) => {
             return square === evt.target;
         });
