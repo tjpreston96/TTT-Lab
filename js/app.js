@@ -15,7 +15,7 @@ const winningCombos = [
 let board;
 let turn = 'X';
 let win;
-
+let winner = null;
 
 /*----- cached element references -----*/
 const messages = document.querySelector('h2');
@@ -34,7 +34,7 @@ document.getElementById('reset-button').addEventListener('click', restart);
 
 
 function getWinner() {
-    let winner = null;
+    
     winningCombos.forEach(function(combo, idx) {
         if (board[combo[0]] && board[combo[0]] === board[combo[1]] && board[combo[0]] === board[combo[2]]) winner = board[combo[0]];
         });
@@ -43,13 +43,16 @@ function getWinner() {
 
 
 function handleTurn(evt) {
-    let idx = squares.findIndex((square) => {
-        return square === evt.target;
-    });
-    board[idx] = turn;
-    turn = turn === 'X' ? 'O' : 'X';
-    win = getWinner();
-    render();
+    console.log(evt.target.textContent)
+    if(winner === null || !evt.target.textContent) {
+        let idx = squares.findIndex((square) => {
+            return square === evt.target;
+        });
+        board[idx] = turn;
+        turn = turn === 'X' ? 'O' : 'X';
+        win = getWinner();
+        render();
+    }
 };
 
 
